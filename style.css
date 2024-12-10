@@ -1,0 +1,71 @@
+/* Основные стили для всего сайта */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Стили шапки */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Стили меню */
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для карточек автомобилей */
+.car-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.car-item img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.car-item h3 {
+    margin-top: 10px;
+}
+
+/* Страница деталей */
+.car-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.car-details img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .car-item {
+        margin: 10px;
+        padding: 5px;
+    }
+}
