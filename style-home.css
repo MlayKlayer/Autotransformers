@@ -1,82 +1,102 @@
-/* Общие стили для всех страниц */
+/* Общие стили */
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
     color: #333;
 }
 
+/* Контейнер для основной области сайта */
 .container {
     width: 80%;
     margin: auto;
     padding: 20px;
 }
 
-header, footer {
+/* Заголовок страницы */
+header {
+    text-align: center;
+    padding: 20px 0;
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    font-size: 2rem;
 }
 
-h1, h2, h3 {
-    color: #333;
-}
-
-/* Стили для домашней страницы */
-.home-banner {
-    background-image: url('images/home-banner.jpg');
-    background-size: cover;
-    height: 300px;
+/* Секция с объявлениями */
+.car-list {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding: 0 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-.home-banner h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-/* Общий стиль для карточек автомобилей */
-.car-card {
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.car-item {
     background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%;
+    transition: transform 0.3s ease-in-out;
 }
 
-.car-card img {
+.car-item:hover {
+    transform: translateY(-5px);
+}
+
+.car-item img {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
 }
 
-.car-card h3 {
+.car-item-content {
+    padding: 15px;
+}
+
+.car-item-content h3 {
     font-size: 1.5rem;
-    margin: 10px 0;
+    margin: 0 0 10px;
 }
 
-.car-card p {
-    color: #555;
+.car-item-content p {
+    margin: 0 0 10px;
+    color: #666;
 }
 
-/* Добавим стиль для кнопки */
-button {
+/* Кнопка на карточке */
+.car-item-content a {
+    display: inline-block;
+    padding: 10px 15px;
     background-color: #333;
     color: #fff;
-    border: none;
+    text-decoration: none;
     border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-button:hover {
+.car-item-content a:hover {
     background-color: #555;
+}
+
+/* Дополнительные стили для улучшенного внешнего вида */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .car-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .car-item {
+        width: 100%;
+    }
 }
