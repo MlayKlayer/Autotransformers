@@ -3,49 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Deals - AutoTransformers Ltd.</title>
+    <meta name="description" content="Browse our full inventory of inspected, certified used cars at AutoTransformers.">
+    <title>Inventory - AutoTransformers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>AutoTransformers Ltd.</h1>
         <nav>
-            <ul>
+            <a href="index.html" class="logo">Auto<span>Transformers</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="car-deals.html">Car Deals</a></li>
-                <li><a href="login.html">Login/Register</a></li>
+                <li><a href="car-deals.html" class="active">Inventory</a></li>
+                <li><a href="login.html" class="btn btn-outline">Sign In</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h2>Car Deals</h2>
-        <section class="car-list">
-            <article class="car">
-                <img src="car1.jpg" alt="Car 1">
-                <h3>Car Model 1</h3>
-                <p>Price: $10,000</p>
-                <a href="car-details-1.html">View Details</a>
-            </article>
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Inventory</h1>
+            <p>Browse our hand-picked selection of quality used vehicles</p>
+        </div>
+    </section>
 
-            <article class="car">
-                <img src="car2.jpg" alt="Car 2">
-                <h3>Car Model 2</h3>
-                <p>Price: $15,000</p>
-                <a href="car-details-2.html">View Details</a>
-            </article>
+    <main class="section">
+        <div class="container">
+            <div class="inventory-toolbar">
+                <p class="results-count"><strong>3</strong> vehicles available</p>
+                <div class="sort-controls">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="year-new">Year: Newest</option>
+                        <option value="mileage-low">Mileage: Lowest</option>
+                    </select>
+                </div>
+            </div>
 
-            <article class="car">
-                <img src="car3.jpg" alt="Car 3">
-                <h3>Car Model 3</h3>
-                <p>Price: $20,000</p>
-                <a href="car-details-3.html">View Details</a>
-            </article>
-        </section>
+            <div class="car-cards">
+                <article class="car-card" data-price="25000" data-year="2020" data-mileage="20000">
+                    <div class="car-card-badge">Featured</div>
+                    <img src="images/car1.jpg" alt="2020 Ford Mustang GT">
+                    <div class="car-card-content">
+                        <h3>2020 Ford Mustang GT</h3>
+                        <p class="car-card-specs">5.0L V8 &bull; 20,000 km &bull; Gasoline</p>
+                        <ul class="car-card-highlights">
+                            <li>Rear-Wheel Drive</li>
+                            <li>460 HP</li>
+                            <li>6-Speed Manual</li>
+                        </ul>
+                        <div class="car-card-actions">
+                            <span class="price">$25,000</span>
+                            <a href="car-details-1.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="car-card" data-price="12000" data-year="2005" data-mileage="180000">
+                    <div class="car-card-badge sale">Great Value</div>
+                    <img src="images/car2.jpg" alt="2005 Chrysler 300C">
+                    <div class="car-card-content">
+                        <h3>2005 Chrysler 300C</h3>
+                        <p class="car-card-specs">3.6L V6 &bull; 180,000 km &bull; Gasoline</p>
+                        <ul class="car-card-highlights">
+                            <li>Rear-Wheel Drive</li>
+                            <li>250 HP</li>
+                            <li>5-Speed Automatic</li>
+                        </ul>
+                        <div class="car-card-actions">
+                            <span class="price">$12,000</span>
+                            <a href="car-details-2.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="car-card" data-price="35000" data-year="2015" data-mileage="36000">
+                    <div class="car-card-badge premium">Premium</div>
+                    <img src="images/car3.jpg" alt="2015 Porsche Cayenne">
+                    <div class="car-card-content">
+                        <h3>2015 Porsche Cayenne</h3>
+                        <p class="car-card-specs">3.6L V6 &bull; 36,000 km &bull; Gasoline</p>
+                        <ul class="car-card-highlights">
+                            <li>All-Wheel Drive</li>
+                            <li>300 HP</li>
+                            <li>8-Speed Tiptronic</li>
+                        </ul>
+                        <div class="car-card-actions">
+                            <span class="price">$35,000</span>
+                            <a href="car-details-3.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 AutoTransformers Ltd. All rights reserved.</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Auto<span>Transformers</span></a>
+                <p>Premium used cars at affordable prices.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="car-deals.html">Inventory</a></li>
+                    <li><a href="login.html">Sign In</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>info@autotransformers.com</p>
+                <p>+359 123 456 789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AutoTransformers Ltd. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

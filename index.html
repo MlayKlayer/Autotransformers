@@ -1,38 +1,187 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>АутоТрансформърс ООД</title>
+    <meta name="description" content="AutoTransformers - Premium used cars at affordable prices. Browse our curated selection of quality vehicles.">
+    <title>AutoTransformers - Premium Used Cars</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>АутоТрансформърс ООД</h1>
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="car-deals.html">Car Deals</a></li>
-                <li><a href="login.html">Login/Register</a></li>
+            <a href="index.html" class="logo">Auto<span>Transformers</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="car-deals.html">Inventory</a></li>
+                <li><a href="login.html" class="btn btn-outline">Sign In</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Добре дошли в АутоТрансформърс!</h2>
-            <p>Ние предлагаме най-добрите автомобили по достъпни цени. Запознайте се с нашите обяви.</p>
-        </section>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your Perfect Ride</h1>
+            <p>Premium used cars, inspected and certified. Drive away with confidence.</p>
+            <div class="hero-actions">
+                <a href="car-deals.html" class="btn btn-primary btn-lg">Browse Inventory</a>
+                <a href="#featured" class="btn btn-outline btn-lg">Featured Cars</a>
+            </div>
+        </div>
+    </section>
 
-        <section>
-            <h3>Контакти</h3>
-            <p>Email: info@autotransformers.com</p>
-            <p>Телефон: +359 123 456 789</p>
-        </section>
-    </main>
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stat">
+                <strong>150+</strong>
+                <span>Cars Sold</span>
+            </div>
+            <div class="stat">
+                <strong>50+</strong>
+                <span>Happy Clients</span>
+            </div>
+            <div class="stat">
+                <strong>3 Year</strong>
+                <span>Warranty Available</span>
+            </div>
+            <div class="stat">
+                <strong>100%</strong>
+                <span>Inspected</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Vehicles</h2>
+            <p class="section-subtitle">Hand-picked cars from our latest inventory</p>
+            <div class="car-cards">
+                <article class="car-card">
+                    <div class="car-card-badge">Featured</div>
+                    <img src="images/car1.jpg" alt="2020 Ford Mustang GT">
+                    <div class="car-card-content">
+                        <h3>2020 Ford Mustang GT</h3>
+                        <p class="car-card-specs">5.0L V8 &bull; 20,000 km &bull; Gasoline</p>
+                        <div class="car-card-actions">
+                            <span class="price">$25,000</span>
+                            <a href="car-details-1.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="car-card">
+                    <img src="images/car2.jpg" alt="2005 Chrysler 300C">
+                    <div class="car-card-content">
+                        <h3>2005 Chrysler 300C</h3>
+                        <p class="car-card-specs">3.6L V6 &bull; 180,000 km &bull; Gasoline</p>
+                        <div class="car-card-actions">
+                            <span class="price">$12,000</span>
+                            <a href="car-details-2.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="car-card">
+                    <img src="images/car3.jpg" alt="2015 Porsche Cayenne">
+                    <div class="car-card-content">
+                        <h3>2015 Porsche Cayenne</h3>
+                        <p class="car-card-specs">3.6L V6 &bull; 36,000 km &bull; Gasoline</p>
+                        <div class="car-card-actions">
+                            <span class="price">$35,000</span>
+                            <a href="car-details-3.html" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="section-cta">
+                <a href="car-deals.html" class="btn btn-secondary btn-lg">View All Inventory</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about-section">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2 class="section-title" style="text-align:left">Why AutoTransformers?</h2>
+                <ul class="features-list">
+                    <li>
+                        <strong>Full Inspection</strong>
+                        <p>Every vehicle passes a rigorous multi-point inspection before listing.</p>
+                    </li>
+                    <li>
+                        <strong>Transparent Pricing</strong>
+                        <p>No hidden fees. The price you see is the price you pay.</p>
+                    </li>
+                    <li>
+                        <strong>Warranty Options</strong>
+                        <p>Extended warranty packages available on all vehicles.</p>
+                    </li>
+                    <li>
+                        <strong>Trade-In Welcome</strong>
+                        <p>Get a fair value for your current vehicle as part of the deal.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="images/car1.jpg" alt="AutoTransformers showroom">
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have a question? We're here to help.</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">&#9993;</div>
+                    <h3>Email Us</h3>
+                    <p>info@autotransformers.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">&#9742;</div>
+                    <h3>Call Us</h3>
+                    <p>+359 123 456 789</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">&#9900;</div>
+                    <h3>Visit Us</h3>
+                    <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 АутоТрансформърс ООД. All Rights Reserved.</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Auto<span>Transformers</span></a>
+                <p>Premium used cars at affordable prices.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="car-deals.html">Inventory</a></li>
+                    <li><a href="login.html">Sign In</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>info@autotransformers.com</p>
+                <p>+359 123 456 789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AutoTransformers Ltd. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -3,30 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Details - Model 3</title>
+    <meta name="description" content="2015 Porsche Cayenne - 3.6L V6, 36,000 km. View full specs and pricing at AutoTransformers.">
+    <title>2015 Porsche Cayenne - AutoTransformers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>AutoTransformers Ltd.</h1>
-    </header>
-    <main>
-        <h2>Car Details - Model 3</h2>
-        <div class="car-details">
-            <img src="images/car3.jpg" alt="Car Model 3" width="500">
-            <h3>Car Model 3</h3>
-            <ul>
-                <li><strong>Year:</strong> 2015</li>
-                <li><strong>Mileage:</strong> 36,000 km</li>
-                <li><strong>Engine:</strong> 3.6L Turbo</li>
-                <li><strong>Fuel:</strong> Gasoline</li>
-                <li><strong>Price:</strong> $40,000</li>
+        <nav>
+            <a href="index.html" class="logo">Auto<span>Transformers</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="car-deals.html">Inventory</a></li>
+                <li><a href="login.html" class="btn btn-outline">Sign In</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <section class="page-header page-header-sm">
+        <div class="container">
+            <a href="car-deals.html" class="back-link">&larr; Back to Inventory</a>
+            <h1>2015 Porsche Cayenne</h1>
         </div>
-        <a href="car-deals.html">Back to Car Deals</a>
+    </section>
+
+    <main class="section">
+        <div class="container">
+            <div class="car-detail-layout">
+                <div class="car-detail-image">
+                    <img src="images/car3.jpg" alt="2015 Porsche Cayenne">
+                </div>
+                <div class="car-detail-info">
+                    <div class="car-detail-price-box">
+                        <span class="price-label">Price</span>
+                        <span class="price-value">$35,000</span>
+                    </div>
+
+                    <table class="specs-table">
+                        <tr>
+                            <th>Year</th>
+                            <td>2015</td>
+                        </tr>
+                        <tr>
+                            <th>Make</th>
+                            <td>Porsche</td>
+                        </tr>
+                        <tr>
+                            <th>Model</th>
+                            <td>Cayenne</td>
+                        </tr>
+                        <tr>
+                            <th>Mileage</th>
+                            <td>36,000 km</td>
+                        </tr>
+                        <tr>
+                            <th>Engine</th>
+                            <td>3.6L V6</td>
+                        </tr>
+                        <tr>
+                            <th>Horsepower</th>
+                            <td>300 HP</td>
+                        </tr>
+                        <tr>
+                            <th>Transmission</th>
+                            <td>8-Speed Tiptronic</td>
+                        </tr>
+                        <tr>
+                            <th>Drivetrain</th>
+                            <td>All-Wheel Drive</td>
+                        </tr>
+                        <tr>
+                            <th>Fuel Type</th>
+                            <td>Gasoline</td>
+                        </tr>
+                        <tr>
+                            <th>Condition</th>
+                            <td>Excellent</td>
+                        </tr>
+                    </table>
+
+                    <div class="car-detail-actions">
+                        <a href="login.html" class="btn btn-primary btn-lg btn-block">Contact Dealer</a>
+                        <a href="tel:+359123456789" class="btn btn-secondary btn-lg btn-block">Call +359 123 456 789</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-description">
+                <h2>About This Vehicle</h2>
+                <p>This 2015 Porsche Cayenne is a premium luxury SUV with only 36,000 km. The 3.6L V6 engine paired with the 8-speed Tiptronic transmission and all-wheel drive delivers an outstanding driving experience both on and off road. Porsche engineering at its finest.</p>
+                <p>This low-mileage Cayenne has been meticulously maintained, with a full service history. Features include leather interior, panoramic roof, and premium sound system. Fully inspected and eligible for our premium extended warranty.</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; 2024 AutoTransformers Ltd.</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Auto<span>Transformers</span></a>
+                <p>Premium used cars at affordable prices.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="car-deals.html">Inventory</a></li>
+                    <li><a href="login.html">Sign In</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>info@autotransformers.com</p>
+                <p>+359 123 456 789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AutoTransformers Ltd. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

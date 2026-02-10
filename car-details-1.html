@@ -3,30 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Details - Model 1</title>
+    <meta name="description" content="2020 Ford Mustang GT - 5.0L V8, 20,000 km. View full specs and pricing at AutoTransformers.">
+    <title>2020 Ford Mustang GT - AutoTransformers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>AutoTransformers Ltd.</h1>
-    </header>
-    <main>
-        <h2>Car Details - Model 1</h2>
-        <div class="car-details">
-            <img src="images/car1.jpg" alt="Car Model 1" width="500">
-            <h3>Car Model 1</h3>
-            <ul>
-                <li><strong>Year:</strong> 2020</li>
-                <li><strong>Mileage:</strong> 20,000 km</li>
-                <li><strong>Engine:</strong> 5.0L Turbo</li>
-                <li><strong>Fuel:</strong> Gasoline</li>
-                <li><strong>Price:</strong> $25,000</li>
+        <nav>
+            <a href="index.html" class="logo">Auto<span>Transformers</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="car-deals.html">Inventory</a></li>
+                <li><a href="login.html" class="btn btn-outline">Sign In</a></li>
             </ul>
+        </nav>
+    </header>
+
+    <section class="page-header page-header-sm">
+        <div class="container">
+            <a href="car-deals.html" class="back-link">&larr; Back to Inventory</a>
+            <h1>2020 Ford Mustang GT</h1>
         </div>
-        <a href="car-deals.html">Back to Car Deals</a>
+    </section>
+
+    <main class="section">
+        <div class="container">
+            <div class="car-detail-layout">
+                <div class="car-detail-image">
+                    <img src="images/car1.jpg" alt="2020 Ford Mustang GT">
+                </div>
+                <div class="car-detail-info">
+                    <div class="car-detail-price-box">
+                        <span class="price-label">Price</span>
+                        <span class="price-value">$25,000</span>
+                    </div>
+
+                    <table class="specs-table">
+                        <tr>
+                            <th>Year</th>
+                            <td>2020</td>
+                        </tr>
+                        <tr>
+                            <th>Make</th>
+                            <td>Ford</td>
+                        </tr>
+                        <tr>
+                            <th>Model</th>
+                            <td>Mustang GT</td>
+                        </tr>
+                        <tr>
+                            <th>Mileage</th>
+                            <td>20,000 km</td>
+                        </tr>
+                        <tr>
+                            <th>Engine</th>
+                            <td>5.0L V8 Turbo</td>
+                        </tr>
+                        <tr>
+                            <th>Horsepower</th>
+                            <td>460 HP</td>
+                        </tr>
+                        <tr>
+                            <th>Transmission</th>
+                            <td>6-Speed Manual</td>
+                        </tr>
+                        <tr>
+                            <th>Drivetrain</th>
+                            <td>Rear-Wheel Drive</td>
+                        </tr>
+                        <tr>
+                            <th>Fuel Type</th>
+                            <td>Gasoline</td>
+                        </tr>
+                        <tr>
+                            <th>Condition</th>
+                            <td>Excellent</td>
+                        </tr>
+                    </table>
+
+                    <div class="car-detail-actions">
+                        <a href="login.html" class="btn btn-primary btn-lg btn-block">Contact Dealer</a>
+                        <a href="tel:+359123456789" class="btn btn-secondary btn-lg btn-block">Call +359 123 456 789</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="car-description">
+                <h2>About This Vehicle</h2>
+                <p>This 2020 Ford Mustang GT is in excellent condition with only 20,000 km on the odometer. Powered by a legendary 5.0L V8 engine producing 460 horsepower, paired with a smooth 6-speed manual transmission. This Mustang delivers the iconic American muscle car experience.</p>
+                <p>The vehicle has been fully inspected and serviced. It comes with a clean history report and is eligible for our extended warranty program. Don't miss this opportunity to own one of the most exciting sports cars on the market.</p>
+            </div>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; 2024 AutoTransformers Ltd.</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Auto<span>Transformers</span></a>
+                <p>Premium used cars at affordable prices.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="car-deals.html">Inventory</a></li>
+                    <li><a href="login.html">Sign In</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p>info@autotransformers.com</p>
+                <p>+359 123 456 789</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 AutoTransformers Ltd. All rights reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
