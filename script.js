@@ -252,4 +252,45 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // ===== FINANCING CALCULATOR =====
+    var downPaymentInput = document.getElementById('downPayment');
+    var loanTermSelect = document.getElementById('loanTerm');
+    var interestRateInput = document.getElementById('interestRate');
+    var monthlyPaymentDisplay = document.getElementById('monthlyPayment');
+
+    function calculateMonthlyPayment() {
+        if (!downPaymentInput || !loanTermSelect || !interestRateInput || !monthlyPaymentDisplay) {
+            return; // Calculator not on this page
+        }
+
+        var carPrice = 25000; // Ford Mustang price
+        var downPayment = parseFloat(downPaymentInput.value) || 0;
+        var loanAmount = carPrice - downPayment;
+        var loanTerm = parseInt(loanTermSelect.value) || 48;
+        var annualRate = parseFloat(interestRateInput.value) || 5.9;
+        var monthlyRate = annualRate / 100 / 12;
+
+        if (loanAmount <= 0) {
+            monthlyPaymentDisplay.textContent = '$0';
+            return;
+        }
+
+        var monthlyPayment;
+        if (monthlyRate === 0) {
+            monthlyPayment = loanAmount / loanTerm;
+        } else {
+            monthlyPayment = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, loanTerm)) /
+                            (Math.pow(1 + monthlyRate, loanTerm) - 1);
+        }
+
+        monthlyPaymentDisplay.textContent = '$' + Math.round(monthlyPayment).toLocaleString();
+    }
+
+    if (downPaymentInput) {
+        downPaymentInput.addEventListener('input', calculateMonthlyPayment);
+        loanTermSelect.addEventListener('change', calculateMonthlyPayment);
+        interestRateInput.addEventListener('input', calculateMonthlyPayment);
+        calculateMonthlyPayment(); // Initial calculation
+    }
+
 });
