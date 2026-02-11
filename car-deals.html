@@ -33,19 +33,101 @@
 
     <main class="section">
         <div class="container">
-            <div class="inventory-toolbar">
-                <p class="results-count"><strong>3</strong> vehicles available</p>
-                <div class="sort-controls">
-                    <label for="sort-select">Sort by:</label>
-                    <select id="sort-select">
-                        <option value="featured">Featured</option>
-                        <option value="price-low">Price: Low to High</option>
-                        <option value="price-high">Price: High to Low</option>
-                        <option value="year-new">Year: Newest</option>
-                        <option value="mileage-low">Mileage: Lowest</option>
-                    </select>
-                </div>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search by make, model, or year...">
+                <button class="btn btn-primary">Search</button>
             </div>
+
+            <div class="inventory-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <div class="filter-header">
+                        <h3>Filters</h3>
+                        <button class="btn-reset">Reset All</button>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <div class="price-inputs">
+                            <input type="number" placeholder="Min" id="price-min">
+                            <span>-</span>
+                            <input type="number" placeholder="Max" id="price-max">
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Year</h4>
+                        <div class="year-inputs">
+                            <input type="number" placeholder="From" id="year-min">
+                            <span>-</span>
+                            <input type="number" placeholder="To" id="year-max">
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Mileage</h4>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="0-50000"> Under 50,000 km
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="50000-100000"> 50,000 - 100,000 km
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="100000-150000"> 100,000 - 150,000 km
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="150000+"> 150,000+ km
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Drivetrain</h4>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="rwd"> Rear-Wheel Drive
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="fwd"> Front-Wheel Drive
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="awd"> All-Wheel Drive
+                        </label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4>Fuel Type</h4>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="gasoline"> Gasoline
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="diesel"> Diesel
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="hybrid"> Hybrid
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="electric"> Electric
+                        </label>
+                    </div>
+
+                    <button class="btn btn-primary btn-block">Apply Filters</button>
+                </aside>
+
+                <!-- Inventory Content -->
+                <div class="inventory-content">
+                    <div class="inventory-toolbar">
+                        <p class="results-count"><strong>3</strong> vehicles available</p>
+                        <div class="sort-controls">
+                            <label for="sort-select">Sort by:</label>
+                            <select id="sort-select">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="year-new">Year: Newest</option>
+                                <option value="mileage-low">Mileage: Lowest</option>
+                            </select>
+                        </div>
+                    </div>
 
             <div class="car-cards">
                 <article class="car-card" data-price="25000" data-year="2020" data-mileage="20000">
@@ -101,6 +183,8 @@
                         </div>
                     </div>
                 </article>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
